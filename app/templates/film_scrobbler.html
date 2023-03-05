@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block content %}
+<!-- display info -->
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1 class="text-center">film scrobbler</h1><br>
+            <h1 class="text-center"><img src="static/images/movieguy.png" height="200px" width="200px"><br><br></h1>
+            <p class="p1">[<i>using: python, flask, postgresql</i>] taking advantage of the tmdb + plex apis and heavily
+                inspired by letterboxd, this app allows
+                the user to
+                scrobble their plex watches and rate/review/make lists of their watched films, as well as interact
+                with other users, leave comments, etc.</p>
+        </div>
+        <!-- display content -->
+        <div class="col-md">
+            <div class="content-section">
+                <h2 class="text-center">currently in development.<br>check out the [<b><a
+                            href="https://github.com/jacobfholland/astro">repo</a></b>]!</h2><br>
+                <img class="img-fluid w-100" src="static/images/wip_fs.png">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

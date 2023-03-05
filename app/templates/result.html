@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block content %}
+<!-- display info -->
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1 class="text-center">dnd sleep spell calc result:</h1><br><br>
+            <h1 class="text-center"><img src="static/images/sleepguy.png" height="200px" width="200px"><br><br><br></h1>
+        </div>
+        <!-- display content -->
+        <div class="col-md">
+            {% if enemies %}
+            {% for enemy, result in zip(enemies, results) %}
+            <ul class="list-group">
+                {% if result == "is awake." %}
+                <li class="list-group-item list-group-item-danger">{{ enemy.name }} {{ result }}</li>
+                {% else %} <li class="list-group-item list-group-item-success">{{ enemy.name }} {{ result }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>no results to display.</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endblock content %}

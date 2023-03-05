@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+<!-- display title -->
+<h1 class="text-center">hello!</h1><br><br>
+<h1 class="text-center"><img src="static/images/wolfguy.png" height="200px" width="200px"><br><br><br></h1>
+<!-- display projects -->
+<div class="d-flex justify-content-center">
+    {% for project in projects %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ project.author }}</a>
+                <small class="text-muted-mine">{{ project.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href=" {{ project.url }} ">{{ project.name }}</a></h2>
+            <p class="article-content"><img src=" {{ project.img_src }} "
+                    class="rounded-circle shadow-2-strong float-right" alt="..." width="100px" height="100px"
+                    margin="200px"> &nbsp; &nbsp; &nbsp; {{ project.descr }}</p>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+{% endblock content %}
