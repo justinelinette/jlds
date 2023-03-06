@@ -1,69 +1,94 @@
 {% extends "index.html" %}
+
 {% block content %}
+
 <!-- display info -->
 <div class="container">
     <div class="row">
         <div class="col-md">
-            <h1 class="text-center">dnd sleep spell calc</h1><br><br>
-            <h1 class="text-center"><img src="static/images/sleepguy.png" height="200px" width="200px"><br><br></h1>
+            <h1 class="text-center">Dnd Sleep Spell Calculator</h1>
+            <br>
+            <br>
+            <h1 class="text-center"><img src="{{ url_for('static', filename='images/sleepguy.png') }}" height="200"
+                    width="200" alt="Sleep guy image"></h1>
             <p class="p1">browser-based calculator to quickly determine enemies affected by a sleep spell in dnd 5e.
                 takes user input to dynamically create enemies with a given hp value, which is then subtracted from the
-                sleep damage total, determining the enemies' asleep/awake status.</p1>
+                sleep damage total, determining the enemies' asleep/awake status.</p>
         </div>
+
         <!-- display content -->
         <div class="col-md">
             <div class="content-section">
                 <div class="row">
+
                     <!-- form -->
                     <div class="col-sm">
                         <form method="POST" action="{{ url_for('sleep_spell.result') }}">
-                            <label for="num_enemies">number of enemies:<br></label>
-                            <input type="number" name="num_enemies" id="num_enemies" value="{{ num_enemies }}" required>
+                            <label for="num_enemies">number of enemies:</label>
+                            <br>
+                            <input type="number" name="num_enemies" id="num_enemies" value="{{ num_enemies }}" required
+                                min="1" max="30">
+                            <a>[<i>between 1 & 30</i>]</a>
                             <br>
                             <div id="enemy_hp_inputs">
-                                <br><br>
+                                <!-- dynamically generated enemy hp inputs go here -->
+                                <br>
+                                <br>
                             </div>
-                    </div><br><br>
-                    <div class="col-sm"> <label for="sleepinput">sleep spell damage:<br></label>
+                    </div>
+
+                    <div class="col-sm">
+                        <label for="sleepinput">sleep spell damage:</label>
+                        <br>
                         <input type="number" name="sleepinput" id="sleepinput" required>
-                        <br><br>
+                        <br>
+                        <br>
                         <input type="submit" value="cast sleep spell">
                     </div>
+
                     </form>
                     <!-- end form  -->
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- add event listener to num_enemies input field -->
     <script>
-        // add event listener to num_enemies input field
-        document.getElementById("num_enemies").addEventListener("input", function () {
-            var num_enemies = this.value;
-            var enemy_hp_inputs = document.getElementById("enemy_hp_inputs");
+        const numEnemiesInput = document.getElementById("num_enemies");
+        const enemyHpInputs = document.getElementById("enemy_hp_inputs");
+
+        numEnemiesInput.addEventListener("input", () => {
+            const numEnemies = numEnemiesInput.value;
 
             // remove any existing enemy hp input fields
-            while (enemy_hp_inputs.firstChild) {
-                enemy_hp_inputs.removeChild(enemy_hp_inputs.firstChild);
+            while (enemyHpInputs.firstChild) {
+                enemyHpInputs.removeChild(enemyHpInputs.firstChild);
             }
 
             // create new enemy hp input fields
-            for (var i = 0; i < num_enemies; i++) {
-                var label = document.createElement("label");
-                label.setAttribute("for", "hpinput" + (i + 1));
-                label.innerText = "enemy " + (i + 1) + " hp:\n";
-                enemy_hp_inputs.appendChild(label);
+            for (let i = 0; i < numEnemies; i++) {
+                if (i < 30) {
+                    const count = enemyHpInputs.length;
+                    const label = document.createElement("label");
+                    label.setAttribute("for", `hpinput${i + 1}`);
+                    label.innerText = `enemy ${i + 1} hp:`;
+                    enemyHpInputs.appendChild(label);
 
-                var input = document.createElement("input");
-                input.setAttribute("type", "number");
-                input.setAttribute("name", "hpinput" + (i + 1));
-                input.setAttribute("id", "hpinput" + (i + 1));
-                input.setAttribute("required", "");
-                enemy_hp_inputs.appendChild(input);
+                    const input = document.createElement("input");
+                    input.setAttribute("type", "number");
+                    input.setAttribute("name", `hpinput${i + 1}`);
+                    input.setAttribute("id", `hpinput${i + 1}`);
+                    input.setAttribute("required", "");
+                    enemyHpInputs.appendChild(input);
 
-                var br = document.createElement("br");
-                enemy_hp_inputs.appendChild(br);
+                    const br = document.createElement("br");
+                    enemyHpInputs.appendChild(br);
+                }
             }
         });
     </script>
+
 </div>
+
 {% endblock content %}

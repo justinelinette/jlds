@@ -4,7 +4,6 @@ body {
     margin-top: 5rem;
 }
 
-
 h1,
 h2,
 h3,
@@ -130,4 +129,16 @@ a.article-title:hover {
 
 .text-muted-mine {
     color: #666666;
+}
+
+.form-control-static-mine {
+    font-size: 14px;
+    font-family: Poppins;
+    margin-bottom: 0;
+}
+
+.form-control-static.input-lg,
+.form-control-static.input-sm {
+    padding-right: 0;
+    padding-left: 0;
 }

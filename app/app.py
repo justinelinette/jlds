@@ -1,4 +1,3 @@
-from flask import render_template, request
 from . import create_app
 
 app = create_app()
