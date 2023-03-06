@@ -1,23 +1,5 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<!-- template: https://github.com/othneildrew/Best-README-Template/ -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -27,7 +9,7 @@
 
 
 
-<!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://github.com/justinelinette/justinelinette.github.io">
@@ -49,7 +31,6 @@ personal site to host completed + wip projects
 * [![bootstrap][bootstrap-shield]][bootstrap-url]
 
 ## roadmap
-
 - [x] site framework
 - [x] basic styling
 - [x] existing project pages
@@ -64,7 +45,6 @@ personal site to host completed + wip projects
     - [ ] discord bot
     - [ ] free time app
     - [ ] ... ?
-
 
 see [open issues](https://github.com/justinelinette/justinelinette.github.io/issues) for a full list of proposed features/known issues
 
@@ -86,9 +66,9 @@ project link: [https://github.com/justinelinette/justinelinette.github.io](https
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[python-shield]: https://img.shields.io/badge/python-3776AB?style=flat&logo=python&logoColor=ffd343
+[python-shield]: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=ffd343
 [python-url]: https://www.python.org/
-[flask-shield]: https://img.shields.io/badge/flask-white?style=flat&logo=flask&logoColor=black
+[flask-shield]: https://img.shields.io/badge/flask-white?style=for-the-badge&logo=flask&logoColor=black
 [flask-url]: https://flask.palletsprojects.com/en/2.2.x/
 [bootstrap-shield]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com
