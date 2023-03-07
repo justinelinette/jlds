@@ -28,9 +28,8 @@ personal site to host completed + wip projects
 ### built with 
 
 [![python][python-shield]][python-url][![flask][flask-shield]][flask-url][![bootstrap][bootstrap-shield]][bootstrap-url]
-</div>
+
 ## roadmap
-<div align="left">
 - [x] site framework
 - [x] basic styling
 - [x] existing project pages
@@ -45,8 +44,7 @@ personal site to host completed + wip projects
     - [ ] discord bot
     - [ ] free time app
     - [ ] ... ?
-</div>
-<div align="center">
+
 
 see [open issues](https://github.com/justinelinette/justinelinette.github.io/issues) for a full list of proposed features/known issues
 
