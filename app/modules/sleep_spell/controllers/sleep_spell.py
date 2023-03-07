@@ -1,5 +1,6 @@
 from flask import flash, redirect, render_template, request
 from app.modules.sleep_spell.models.enemy import Enemy
+from app.modules.sleep_spell.models.sleep_spell import calc_results
 
 
 class SleepSpellController():
@@ -28,17 +29,8 @@ class SleepSpellController():
                 enemies.append(enemy)
             enemies.sort(key=lambda x: x.hp, reverse=True)
 
-            # calculate the sleep spell results for each enemy and store in a list
-            results = []
-            for enemy in enemies:
-                if enemy.hp <= sleep_dmg:
-                    sleep_dmg -= enemy.hp
-                    result = "is asleep."
-                    enemy.asleep = True
-                else:
-                    enemy.hp -= sleep_dmg
-                    result = "is awake."
-                results.append(result)
+            # call function to calculate results
+            results = calc_results(enemies, sleep_dmg)
 
         zipped = zip(enemies, results)
         return render_template("result.html", enemies=enemies, results=results, zip=zip, title="sleep spell results")

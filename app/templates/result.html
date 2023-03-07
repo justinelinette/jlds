@@ -12,9 +12,9 @@
             {% if enemies %}
             {% for enemy, result in zip(enemies, results) %}
             <ul class="list-group">
-                {% if result == "is awake." %}
-                <li class="list-group-item list-group-item-danger">{{ enemy.name }} {{ result }}</li>
-                {% else %} <li class="list-group-item list-group-item-success">{{ enemy.name }} {{ result }}</li>
+                {% if " is awake." in result %}
+                <li class="list-group-item list-group-item-danger">{{ result }}</li>
+                {% else %} <li class="list-group-item list-group-item-success">{{ result }}</li>
                 {% endif %}
                 {% endfor %}
             </ul>
