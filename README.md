@@ -1,5 +1,6 @@
 <!-- template: https://github.com/othneildrew/Best-README-Template/ -->
 <a name="readme-top"></a>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -20,21 +21,22 @@
  
 ## about
 personal site to host completed + wip projects
-<a href="http://23.239.5.59:5000/"><img src="https://images2.imgbox.com/4a/c3/CRPBdsR5_o.png" width="400"></a>
+<br /><a href="http://23.239.5.59:5000/"><img src="https://images2.imgbox.com/4a/c3/CRPBdsR5_o.png" width="400"></a>
 
 
 
 ### built with 
 
 [![python][python-shield]][python-url][![flask][flask-shield]][flask-url][![bootstrap][bootstrap-shield]][bootstrap-url]
-
+</div>
 ## roadmap
+<div align="left">
 - [x] site framework
 - [x] basic styling
 - [x] existing project pages
     - [x] dnd sleep spell calculator
     - [x] wip film scrobbler
-- [ ] web deployment
+- [x] web deployment
 - [ ] improve styling
 - [ ] implement database
 - [ ] blog page
@@ -43,6 +45,8 @@ personal site to host completed + wip projects
     - [ ] discord bot
     - [ ] free time app
     - [ ] ... ?
+</div>
+<div align="center">
 
 see [open issues](https://github.com/justinelinette/justinelinette.github.io/issues) for a full list of proposed features/known issues
 
