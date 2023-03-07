@@ -63,6 +63,5 @@ async def on_message(message):
         else:
             await response_channel.send("justine fucked something up, sorry")
 
-
-client.run(
-    'MTA4MjY2NTExMTUwNTg4MzE0Ng.GxQ411.-k_p4nSniT--zZFu2gECyr8M9EJRfjwHxNc9u4')
+DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN")
+client.run(DISCORD_TOKEN)
