@@ -6,6 +6,10 @@
 [![Issues][issues-shield]][issues-url]
 [![cclicense][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+
 <br />
 <div align="center">
   <a href="https://github.com/justinelinette/jlinettedev.com">
@@ -25,7 +29,6 @@ personal site to host completed + wip projects
 [![python][python-shield]][python-url][![flask][flask-shield]][flask-url][![bootstrap][bootstrap-shield]][bootstrap-url]
 
 ## roadmap
-<div align="left">
 - [x] site framework
 - [x] basic styling
 - [x] existing project pages
@@ -40,8 +43,8 @@ personal site to host completed + wip projects
     - [ ] discord bot
     - [ ] free time app
     - [ ] ... ?
-</div>
-see [open issues](https://github.com/justinelinette/jlinettedev.com/issues) for a full list of proposed features/known issues
+
+see [open issues](https://github.com/justinelinette/justinelinette.github.io/issues) for a full list of proposed features/known issues
 
 
 ## license
@@ -59,6 +62,7 @@ project link: [https://github.com/justinelinette/jlinettedev.com](https://github
 
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [python-shield]: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=ffd343
 [python-url]: https://www.python.org/
 [flask-shield]: https://img.shields.io/badge/flask-white?style=for-the-badge&logo=flask&logoColor=black
@@ -77,4 +81,4 @@ project link: [https://github.com/justinelinette/jlinettedev.com](https://github
 [license-url]: https://github.com/justinelinette/jlinettedev.com/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: [static/images/site_ss.png]
+[product-screenshot]: static/images/site_ss.png
