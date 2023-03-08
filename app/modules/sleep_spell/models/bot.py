@@ -1,3 +1,5 @@
+import logging
+import threading
 import discord
 from .sleep_spell import calc_results
 from .enemy import Enemy
@@ -12,7 +14,24 @@ client = discord.Client(intents=intents)
 
 
 class Bot():
+    def thread_function(self, name):
+        Bot.start_bot(
+            "MTA4MjY2NTExMTUwNTg4MzE0Ng.GkcvDu.T9ZGWULalQIAryEXRoQXGXa9kro9tejGpZpxxo")
+
+    def start_threading(self):
+        format = "%(asctime)s: %(message)s"
+        logging.basicConfig(format=format, level=logging.INFO,
+                            datefmt="%H:%M:%S")
+        logging.info("Main    : before creating thread")
+        x = threading.Thread(target=self.thread_function, args=(2,))
+        logging.info("Main    : before running thread")
+        x.start()
+        logging.info("Main    : wait for the thread to finish")
+        # x.join()
+        logging.info("Main    : all done")
+
     def start_bot(DISCORD_TOKEN):
+
         @client.event
         async def on_ready():
             print('Logged in as {0.user}'.format(client))
@@ -64,4 +83,5 @@ class Bot():
                             await response_channel.send("\u2022  :alarm_clock:  " + result + "\n")
                 else:
                     await response_channel.send("justine fucked something up, sorry")
+
         client.run(DISCORD_TOKEN)
