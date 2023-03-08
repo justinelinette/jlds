@@ -3,7 +3,7 @@ import threading
 import discord
 from .sleep_spell import calc_results
 from .enemy import Enemy
-from flask import current_app
+from app.config.config import Config
 
 intents = discord.Intents.default()
 intents.members = True
@@ -15,8 +15,7 @@ client = discord.Client(intents=intents)
 
 class Bot():
     def thread_function(self, name):
-        Bot.start_bot(
-            "MTA4MjY2NTExMTUwNTg4MzE0Ng.GkcvDu.T9ZGWULalQIAryEXRoQXGXa9kro9tejGpZpxxo")
+        Bot.start_bot(Config.DISCORD_TOKEN)
 
     def start_threading(self):
         format = "%(asctime)s: %(message)s"

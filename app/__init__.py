@@ -1,11 +1,10 @@
 from flask import Flask
-import logging
-import threading
-import time
 from app.modules.sleep_spell.models.bot import Bot
+import subprocess
 
 
 def create_app():
+    subprocess.run(["pip", "install", "--upgrade", "pip"], capture_output=True)
     app = Flask(__name__)
     with app.app_context():
         from app.config.config import Config
