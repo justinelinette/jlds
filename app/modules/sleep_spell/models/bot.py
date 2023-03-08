@@ -14,15 +14,15 @@ client = discord.Client(intents=intents)
 
 
 class Bot():
-    def thread_function(self, name):
+    def thread_function(name):
         Bot.start_bot(Config.DISCORD_TOKEN)
 
-    def start_threading(self):
+    def start_threading():
         format = "%(asctime)s: %(message)s"
         logging.basicConfig(format=format, level=logging.INFO,
                             datefmt="%H:%M:%S")
         logging.info("Main    : before creating thread")
-        x = threading.Thread(target=self.thread_function, args=(2,))
+        x = threading.Thread(target=Bot.thread_function, args=(1,))
         logging.info("Main    : before running thread")
         x.start()
         logging.info("Main    : wait for the thread to finish")
