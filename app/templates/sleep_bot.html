@@ -1,0 +1,106 @@
+{% extends "index.html" %}
+{% block content %}
+<!-- display info -->
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div class="content-section">
+                <h1 class="text-center">sleep spell bot</h1><br>
+                <h1 class="text-center"><img src="static/images/botguy.png" height="200px" width="200px"></h1>
+                <p class="p1">
+                    the sleep spell discord bot calculates the enemies affected by dnd’s sleep
+                    spell- the very same as my [<b><a href="/sleep_spell">sleep spell calculator</a></b>]- wrapped up
+                    conveniently in a bot that can be called right inside your discord server.<br>
+                    its intended use is to allow the DM to privately call the bot provide the sleep spell’s damage,
+                    and the hp of all enemies targeted. the bot will calculate the effects (ie. who is awake and who is
+                    asleep) according to dnd 5e’s rules as written, and return it back to all the players.</p><br>
+                <p align="center">
+                    <a class="btn btn-primary" data-toggle="collapse" href="#readme" role="button" aria-expanded="false"
+                        aria-controls="readme">
+                        view readme
+                    </a>
+                </p>
+                <div class="collapse" id="readme">
+                    <div class="card-columns">
+                        <div class="card card-body text-white bg-dark mb-3">
+
+
+                            <h2 id="installation">installation:</h2>
+                            <ul>
+                                <li>ensure that you’re signed into a discord account with ‘Manage Server’ privileges
+                                    for the server to which you’d like to add sleep spell bot</li><br>
+                                <li>follow the [<b><a
+                                            href="https://discord.com/api/oauth2/authorize?client_id=1082665111505883146&permissions=534723947584&scope=bot">link</a></b>]
+                                    to invite the bot to your server</li><br>
+                                <li>select the correct server from the dropdown</li><br>
+                                <li>ensure all permissions are checked before clicking ‘Authorize’</li><br>
+                                <li>the bot should now appear as a member of your server and can be
+                                    called<ul><br>
+                                        <li>if using private channels, ensure the bot is added to these channels via
+                                            ‘Edit Channel’ → ‘Permissions’</li><br>
+                                        <li>be sure to use the !response command as detailed below to set the channel in
+                                            which the bot will display its results to other players</li><br>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h2 id="commands">commands:</h2>
+                            <h3 id="sleep">!sleep</h3>
+                            <ul>
+                                <li>the DM should first use the command “!sleep” to call the bot in a private server
+                                    - keep those enemy hp’s private from your players!</li><br>
+                                <li>the bot will then ask for the total sleep damage, to be entered as a simple
+                                    number, ie. “26”
+                                </li><br>
+                                <li>the bot will then ask for the hp of each enemy, separated by commas ie. “12, 4,
+                                    8”<ul>
+                                        <li>don’t worry about putting the hp’s in order of smallest to least as the
+                                            written spell demands- we take care of all that for you!</li><br>
+                                    </ul>
+                                </li><br>
+                                <li>the bot will then provide the results of the sleep spell in any channel you set
+                                    using the !response command, so any players can see</li><br>
+                            </ul>
+                            <h3 id="response">!response</h3>
+                            <ul>
+                                <li>to set the channel that the bot will drop results in, simply use the command
+                                    “!response” followed by the name of the channel ie. “!response general”</li><br>
+                                <li>the bot will then respond in the channel you’ve set, acknowledging that you’ve
+                                    successfully changed the response channel</li><br>
+                            </ul>
+
+                            <h2 id="license">license:</h2>
+                            <p>distributed under creative commons <br>
+                                see <code>LICENSE.txt</code> for more information</p>
+                            <h2 id="contact">project link:</h2>
+                            <p>
+                                <a
+                                    href="https://github.com/justinelinette/sleepspellbot">https://github.com/justinelinette/sleepspellbot</a>
+                            </p>
+                            <p align="right">(<a href="#readme-top">back to top</a>)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="content-section">
+                <div align="center">
+                    <a href="https://images2.imgbox.com/b9/dc/2KWVbJnA_o.png">
+                        <img src="https://images2.imgbox.com/b9/dc/2KWVbJnA_o.png" width="100%">
+                    </a><br><br>
+                    <p align="center"> <a
+                            href="https://discord.com/api/oauth2/authorize?client_id=1082665111505883146&permissions=534723947584&scope=bot"><img
+                                src="/static/images/ssbotlogo.png" class="rounded-circle shadow-2-strong float-right"
+                                alt="..." width="100px" height="100px" margin="150px"></a>&nbsp;&nbsp;[<a
+                            href="https://discord.com/api/oauth2/authorize?client_id=1082665111505883146&permissions=534723947584&scope=bot"><b>invite
+                                sleep spell bot to your discord server</b></a>]</p>
+                </div><br>
+
+                <br>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

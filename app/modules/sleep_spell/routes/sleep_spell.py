@@ -1,5 +1,5 @@
 
-from flask import Blueprint, render_template
+from flask import Blueprint
 from app.modules.sleep_spell.controllers.sleep_spell import SleepSpellController
 
 
