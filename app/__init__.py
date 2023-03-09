@@ -1,10 +1,7 @@
 from flask import Flask
-from app.modules.sleep_spell.models.bot import Bot
-import subprocess
 
 
 def create_app():
-    # subprocess.run(["pip", "install", "--upgrade", "pip"], capture_output=True)
     app = Flask(__name__)
     with app.app_context():
         from app.config.config import Config
@@ -18,6 +15,3 @@ def create_app():
         app.register_blueprint(sleep_spell)
         app.register_blueprint(film_scrobbler)
         return app
-
-
-Bot.start_threading()
