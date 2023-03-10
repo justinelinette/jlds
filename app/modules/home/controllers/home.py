@@ -16,11 +16,11 @@ class HomeController():
                            img_src="/static/images/thumb_ss.png",
                            descr="calculate enemies affected by sleep spell in dnd 5e",
                            url="/sleep_spell")
-        project3 = Project(name="dnd sleep spell calculator BOT",
+        project3 = Project(name="sleep spell bot",
                            author="justinelinette",
                            date_posted="3/9/2023",
                            img_src="/static/images/thumb_ssb.png",
-                           descr="sleep spell bot",
+                           descr="calculate enemies affected by sleep spell in dnd 5e - in discord!",
                            url="/spell_bot")
         projects = [project1, project2, project3]
         return render_template("home.html", projects=projects)
